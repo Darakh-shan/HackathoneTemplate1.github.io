@@ -1,7 +1,6 @@
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import page from "../page";
 
 interface Products {
   id: number;
@@ -15,42 +14,40 @@ interface Products {
 
 const product: Products[] = [
   {
-    id: 1,
-    tittle: "T-shirt with Tape Details",
-    price: "$120",
-    img: "/product1.png",
+    id: 5,
+    tittle: "Vertical Striped Shirt",
+    price: "$212",
+    img: "/product5.png",
+    old_price: "$232",
+    percent_Off: "-20",
   },
   {
-    id: 2,
-    tittle: "Skinny fit jeans",
-    price: "$240",
-    img: "/product2.png",
-    old_price: "$260",
-    percent_Off: "-20%",
+    id: 6,
+    tittle: "Courage Graphic T-shirt",
+    price: "$145",
+    img: "/product6.png",
   },
   {
-    id: 3,
-    tittle: "Checkered Shirt",
-    price: "$120",
-    img: "/product3.png",
+    id: 7,
+    tittle: "Loose Fit Bermuda Shorts",
+    price: "$80",
+    img: "/product7.png",
   },
   {
-    id: 4,
-    tittle: "Sleeve Striped T-shirt",
-    price: "$120",
-    img: "/product4.png",
-    old_price: "$160",
-    percent_Off: "-30%",
+    id: 8,
+    tittle: "Faded Skinny Jeans",
+    price: "$210",
+    img: "/product8.png",
   },
 ];
 
 const ratingStar = [<FaStar />, <FaStar />, <FaStar />, <FaStar />, <FaStar />];
 
-const products = () => {
+const TopItems = () => {
   return (
-    <div className="w-full md:h-[400px] mt-10">
+    <div className="w-full h-[400px] mt-10">
       <h1 className="text-3xl md:text-4xl font-bold text-center">
-        NEW ARRIVALS
+        Top SELLING
       </h1>
       <div className="flex flex-col md:flex-row  md:justify-between px-20 mt-10">
         {product.map((details) => {
@@ -89,4 +86,4 @@ const products = () => {
   );
 };
 
-export default products;
+export default TopItems;
